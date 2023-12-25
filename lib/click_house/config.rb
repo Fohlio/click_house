@@ -33,6 +33,7 @@ module ClickHouse
       },
       # should be after json load options
       symbolize_keys: false,
+      retry_options: nil,
     }.freeze
 
     attr_accessor :adapter
@@ -55,6 +56,7 @@ module ClickHouse
     attr_accessor :oj_dump_options
     attr_accessor :json_serializer # [ClickHouse::Serializer::Base]
     attr_accessor :symbolize_keys # [NilClass, Boolean]
+    attr_accessor :retry_options # [NilClass, Hash]
 
     def initialize(params = {})
       assign(DEFAULTS.merge(params))

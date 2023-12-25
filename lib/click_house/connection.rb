@@ -55,6 +55,10 @@ module ClickHouse
         conn.headers = config.headers
         conn.ssl.verify = config.ssl_verify
 
+        if config.retry_options
+          conn.request :retry, config.retry_options
+        end
+
         if config.auth?
           if faraday_v1?
             conn.request :basic_auth, config.username, config.password
