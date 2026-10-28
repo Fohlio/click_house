@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-performance
 
 AllCops:
@@ -71,7 +71,7 @@ Metrics/AbcSize:
   Max: 40
 
 # ============================== Naming =============================
-Naming/PredicateName:
+Naming/PredicatePrefix:
   ForbiddenPrefixes:
     - is_
 Naming/FileName:

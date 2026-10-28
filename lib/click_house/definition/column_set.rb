@@ -55,7 +55,7 @@ module ClickHouse
         columns << "#{name} Nested #{ColumnSet.new(&block)}"
       end
 
-      alias_method :Nested, :nested
+      alias_method :Nested, :nested # rubocop:disable Naming/MethodName
 
       def push(sql)
         columns << sql

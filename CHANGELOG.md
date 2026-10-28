@@ -1,3 +1,11 @@
+# Unreleased
+* Fix `JSON.parse` call for json 3.x (options are passed as keywords)
+* Explicitly require `cgi` (used by logging middleware, no longer loaded by faraday)
+* Add `csv` runtime dependency (no longer a default gem since Ruby 3.4)
+* Update development dependencies (activesupport locked to `~> 7.2`, rexml removed)
+* Update rubocop config for rubocop 1.92
+* CI runs on Ruby 3.3.13 only
+
 # 2.1.1
 * Fix logging with symbolized keys JSON
 * Unknown formats return raw `Response::ResultSelt` like regular JSON query
